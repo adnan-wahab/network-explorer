@@ -90,16 +90,46 @@ def join():
         if key
     }
 
-    dest = './data/siggy.json'
+    dest = './data/join.json'
 
     #IPython.embed()
+
+
+    def makenode(name, model):
+        import random
+        r = lambda: random.randint(0,255)
+        return {
+            'id': midlist[name],
+            'size': .3,
+            'x': random.uniform(0, 500),
+            'y': random.uniform(0, 200),
+            'color': ('#%02X%02X%02X' % (r(),r(),r()))
+            #'label': 'butt'
+        }
+
+    # def makeedge():
+    #     return {
+    #         'source': 
+    #         'target':
+    #         'id': 
+    #     }
+    nodes = [makenode(n,m) for n,m  in records.items() if n]
+    sigEdge = []
+    pid = [n['id'] for n in nodes]
+    for k, movielist in enumerate(nodes):
+        import random
+        sigEdge.append({
+            'source': random.choice(pid),
+            'target': random.choice(pid),
+            'id': k
+        })
 
     json.dump({
         'tags': taglist,
         'movies': processed,
-        'connections': edges,
-        'nodes': [],
-        'edges': []
+        'connections': edges
+        # 'nodes': nodes,
+        # 'edges': sigEdge
     }, open(dest,'w+'))
 
 

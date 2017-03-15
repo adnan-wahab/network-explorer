@@ -1,38 +1,36 @@
-let d3 = require('d3')
+//require('./stress.js')
 
-console.log('ho')
+require('./pix')
 
-let populate = (el) => {
-  let input = d3.select(el)
+//require('./party')
 
-  console.log('YO')
+// let d3 = require('d3')
+// let populate = (el) => {
+//   let input = d3.select(el)
 
-  input.selectAll('option').data(
-    d3.shuffle(Object.values(tags))
-      .map((d) => { return d.name })
-  ).enter().append('option').text((d) => { return  d })
-}
+//   console.log('YO')
 
+//   input.selectAll('option').data(
+//     d3.shuffle(Object.values(tags))
+//       .map((d) => { return d.name })
+//   ).enter().append('option').text((d) => { return  d })
+// }
 
-d3.json('../data/join.json', (err, data) => {
-  window.data = data
-})
+// d3.json('../data/join.json', (err, data) => {
+//   window.data = data
+// })
 
-
-let init = () => {
-  document.querySelectorAll('select').forEach(populate)
-}
-
+// let init = () => {
+//   document.querySelectorAll('select').forEach(populate)
+// }
 
 // d3.json('../data/tags.json', (err, tags) => {
 //   d3.json('../data/movies.json', (err, movies) => {
 //     window.tags = tags
 //     window.movies = movies
-//
+
 //   })
 // })
-
-
 
 
 // console.log(123122)
@@ -42,16 +40,16 @@ let init = () => {
 //     .attr('width', size.width)
 //     .attr('height', size.height)
 
-function dostuff (hi) {
-  window.data = hi
+// function dostuff (hi) {
+//   window.data = hi
  
-  // svg.selectAll('circle').data(data)
-  //   .enter().append('circle')
-  //   .attr('cx', Math.random() * size.height)
-  //   .attr('cy', Math.random() * size.height) 
-  //   .attr('r', 10)
-  //   .attr('fill', 'pink')
-}
+//   svg.selectAll('circle').data(data)
+//     .enter().append('circle')
+//     .attr('cx', Math.random() * size.height)
+//     .attr('cy', Math.random() * size.height) 
+//     .attr('r', 10)
+//     .attr('fill', 'pink')
+// }
 
 
 

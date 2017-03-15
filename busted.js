@@ -159,7 +159,7 @@
    container: 'graph-container',
    renderer: {
     container: document.getElementById('graph-container'),
-    type: 'canvas'
+    // type: 'canvas'
    },
    settings: {
     minNodeSize: 8,
@@ -179,12 +179,12 @@
                     nodes = s.graph.nodes(),
                     len = nodes.length;
 
-            for (i = 0; i < len; i++) {
-                nodes[i].x = Math.random();
-                nodes[i].y = Math.random();
-                nodes[i].size = s.graph.degree(nodes[i].id);
-                nodes[i].color = nodes[i].center ? '#333' : '#666';
-            }
+            // for (i = 0; i < len; i++) {
+            //     nodes[i].x = Math.random();
+            //     nodes[i].y = Math.random();
+            //     nodes[i].size = s.graph.degree(nodes[i].id);
+            //     nodes[i].color = nodes[i].center ? '#333' : '#666';
+            // }
 
             // Refresh the display:
             s.refresh();
