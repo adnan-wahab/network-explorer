@@ -1,0 +1,20 @@
+{
+  "name": "hack-sxsw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "regl-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "budo ./v2/adnan.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas-fit": "^1.5.0",
+    "canvas-orbit-camera": "^1.0.2",
+    "d3": "^4.7.3",
+    "express": "^4.15.2",
+    "gl-mat4": "^1.1.4",
+    "regl": "^1.3.0"
+  }
+}

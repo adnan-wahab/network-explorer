@@ -1,0 +1,51 @@
+the reccomendation for rational consumers who value their time
+
+
+FILM 
+Commerce & Industry How is money getting to artists, creators, and
+rights-holders and can emerging technology like blockchain or micro-licensing
+help facilitate and manage the process? How can creatives connect with the right
+industry players to mutually further careers?
+
+Creation How can musicians, filmmakers, or VR/AR designers use tech to create,
+perform, and display in new ways? What tools can we create to make the process
+easier or more inventive?
+
+Distribution With the fragmentation of distribution systems, physical media, and
+streaming options, how do I get my work out to the public and in front of my
+ideal audience?
+
+Consumer
+How can we improve the fan, customer, listener, viewer or user experience?
+
+
+
+Solving the problem of what movie to watch?
+
+The problem with movie rating is that critics have bad opinions.
+https://fivethirtyeight.com/features/fandango-movies-ratings/
+
+The problem with reccomendation engines is that they are a black box.
+They assume that people don't care about their time. 
+I want more information than just a list of junk to surf through.
+Netflix spends millions to improve their algorithm by a fraction of a percent.
+
+But i think a hybrid AI/UI could give you a better movie
+
+50% of online video is consumed via youtube
+
+context sensitive, visual reccomendation 
+
+
+http://www.wolframalpha.com/input/?i=movies+that+are+like+braveheart
+
+
+Distribution
+With the fragmentation of distribution systems, physical media, and streaming options, how do I get my work out to the public and in front of my ideal audience?
+
+Consumer
+How can we improve the fan, customer, listener, viewer or user experience?
+
+
+
+
