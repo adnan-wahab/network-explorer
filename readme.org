@@ -1,4 +1,9 @@
-the reccomendation for rational consumers who value their time
+Solving the problem of what movie to watch?
+
+but more specifically, i want to see WHY two movies are similar
+I want to be able to traverse the network 
+
+like a map for movies
 
 
 FILM 
@@ -20,7 +25,7 @@ How can we improve the fan, customer, listener, viewer or user experience?
 
 
 
-Solving the problem of what movie to watch?
+
 
 The problem with movie rating is that critics have bad opinions.
 https://fivethirtyeight.com/features/fandango-movies-ratings/

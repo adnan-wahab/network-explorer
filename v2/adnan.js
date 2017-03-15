@@ -15,8 +15,7 @@ let populate = (el) => {
 
 
 d3.json('../data/join.json', (err, data) => {
-  console.log(123, err, data)
-  window.data = data;
+  window.data = data
 })
 
 

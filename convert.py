@@ -66,17 +66,40 @@ def join():
                     'name': tag,
                     'value': float(rel)
                 })
+    midlist = {v: k for k, v in movielist.items()}
+    tidlist = {v: k for k, v in taglist.items()}
+    taglist = list(taglist.values())
 
-    for record in records.values():
-        record['tags'] = sorted(record['tags'], key=lambda x: -x['value'])[:10]
+    edges = {k:[] for k in taglist}
 
-    dest = './data/join.json'
+    def process(key, record):
+        tags = sorted(record['tags'], key=lambda x: -x['value'])[:10]
+
+        for tag in tags: edges[tag['name']].append(
+                re.sub('\(\d*\)', '', key).strip()
+        )
+
+        return {
+            'date': re.search('\(\d+\)', key)[0],
+            'tags': [n['name'] for n in tags]
+        }
+
+    processed = {
+        re.sub('\(\d*\)', '', key).strip(): process(key, record)
+        for key, record in records.items()
+        if key
+    }
+
+    dest = './data/siggy.json'
 
     #IPython.embed()
 
     json.dump({
         'tags': taglist,
-        'movies': records
+        'movies': processed,
+        'connections': edges,
+        'nodes': [],
+        'edges': []
     }, open(dest,'w+'))
 
 
