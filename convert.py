@@ -62,14 +62,13 @@ def join():
                 records[movie] = {'tags': []}
 
             if type(tag) is str:
+                records[movie]['id'] = mov_id
                 records[movie]['tags'].append({
                     'name': tag,
                     'value': float(rel)
                 })
-    midlist = {v: k for k, v in movielist.items()}
-    tidlist = {v: k for k, v in taglist.items()}
-    taglist = list(taglist.values())
 
+    taglist = list(taglist.values())
     edges = {k:[] for k in taglist}
 
     def process(key, record):
@@ -81,7 +80,9 @@ def join():
 
         return {
             'date': re.search('\(\d+\)', key)[0],
+            'edges': tags,
             'tags': [n['name'] for n in tags]
+            #'edgeWeights': [n['values'] for n in tags]
         }
 
     processed = {
@@ -93,36 +94,6 @@ def join():
     dest = './data/join.json'
 
     #IPython.embed()
-
-
-    def makenode(name, model):
-        import random
-        r = lambda: random.randint(0,255)
-        return {
-            'id': midlist[name],
-            'size': .3,
-            'x': random.uniform(0, 500),
-            'y': random.uniform(0, 200),
-            'color': ('#%02X%02X%02X' % (r(),r(),r()))
-            #'label': 'butt'
-        }
-
-    # def makeedge():
-    #     return {
-    #         'source': 
-    #         'target':
-    #         'id': 
-    #     }
-    nodes = [makenode(n,m) for n,m  in records.items() if n]
-    sigEdge = []
-    pid = [n['id'] for n in nodes]
-    for k, movielist in enumerate(nodes):
-        import random
-        sigEdge.append({
-            'source': random.choice(pid),
-            'target': random.choice(pid),
-            'id': k
-        })
 
     json.dump({
         'tags': taglist,

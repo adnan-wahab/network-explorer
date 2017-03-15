@@ -13,3 +13,96 @@
 /*     background: #21122F; */
 /*     -webkit-font-smoothing: antialiased; */
 /* } */
+
+
+iframe {
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 400px;
+    height: 400px;
+    margin-top: -100px;
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+.iframe-container {
+    transition-property: opacity;
+    opacity: 0;
+    transition-duration: 2s;
+
+    position: absolute;
+    right: 0px;
+    border-style: inset;
+    border-color: grey;
+    overflow: scroll;
+}
+
+label {float: left;}
+
+.longscroll {
+    overflow-y: auto;
+    width: 400px;
+    float: left;
+}
+
+.movies {
+    height: 200px;
+}
+
+.tags {
+    height: 200px;
+}
+
+.movies::before {
+    /* content: 'movies'; */
+}
+
+.tags::before {
+    /* content: 'tags'; */
+}
+
+.longscroll .row {
+    height: 19px;
+    padding: 0 8px;
+    border-bottom: solid #eee 1px;
+    
+}
+
+.longscroll .row:hover{
+    background: purple;
+    color: white;
+}
+
+
+canvas {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    pointer-events: none;
+}
+
+svg {
+    position: absolute;
+    right: 0px;
+    bottom: 10%;
+    width: 500px;
+    height: 300px;
+
+}
+
+
+body {
+    background: #fcfcfa;
+    color: #333;
+}
